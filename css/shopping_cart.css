@@ -1,0 +1,11 @@
+.product_image{
+	 max-height: 350px;
+    min-height: 350px;
+        position: relative;
+    left: 4em;
+
+}
+
+md-card>:not(md-card-content) img, md-card>img{
+	width: 12em !important;
+}

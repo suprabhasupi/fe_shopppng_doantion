@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="shopping-app">
 <head>
 	<title>Shopping_cart</title>
 	 <meta charset="utf-8">
@@ -8,11 +8,66 @@
     <link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
     <link rel="stylesheet" type="text/css" href="css/new_css.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- <link rel="canonical" href="https://dev.twitter.com/web/tweet-button"> -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+       <link rel="stylesheet" href="css/angular-material.min.css">
 </head>
-<body>
+<body ng-controller="shopController as sc">
+
+
+<!-- http://suprabha.me/js/stock.json -->
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<md-button class="md-fab md-primary pull-right" aria-label="Use Android">
+          <md-icon md-svg-src="img/icons/android.svg"></md-icon>
+        </md-button>
+        </div>
+<div class="product col-md-3 col-sm-3 col-xs-12" ng-repeat="p in sc.productlist">
+
+     <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+      <md-card-title-media>
+            <div class="md-media-lg card-media">
+            <img src="{{p.img}}" class="product_image">
+            </div>
+          </md-card-title-media>
+        <md-card-title>
+
+          <md-card-title-text>
+            <span class="md-headline text-center">{{p.Name}}</span>
+            <span class="md-subhead text-center"> {{p.Price}} </span>
+          </md-card-title-text>
+         
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-click="sc.test(p)" class=""> CART</md-button>
+          <!-- <md-button>Action 2</md-button> -->
+        </md-card-actions>
+      </md-card>
+
+
+
+
+
+<!-- <button ng-click="sc.test(p)">cart</button> -->
+</div>
+</div>
 
 </body>
+<script src="js/angular.min.js"></script>
+<!-- Angular ng-resource -->
+<script src="js/angular-resource.min.js"></script>
+<!-- Angular animation -->
+<script src="js/angular-animate.min.js"></script>
+<script src="js/angular-aria.min.js"></script>
+<!-- <script src="js/angular-messages.min.js"></script> -->
+<!-- Angular Material Library -->
+<script src="js/angular-material.min.js"></script>
+<!-- Jquery Lib -->
+<!-- <script src="js/jquery2.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap.js -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- This one is for router -->
+<script src="js/angular-route.min.js"></script>
+<!-- App.js for this app -->
+<script type="text/javascript" src="app.js"></script>
+
 </html>

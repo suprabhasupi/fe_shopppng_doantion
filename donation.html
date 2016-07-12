@@ -21,7 +21,7 @@
          <p class="speech_bubbles">$<span class="money_left"></span> still needed for this project</p>
             <div class="progress">
                 <div class="progress-bar progress-bar-striped active" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                    progress
+                    <!-- progress -->
                 </div>
             </div>
 
@@ -32,7 +32,9 @@
                     <p class="p1"><span class="left1">Only 3 days left </span>to fund this project.</p>
                     <p class="p2">Join the 42 other donors who have already supported this project.Every dollar helps.</p>
                     <div class="col-md-6 col-sm-6 col-xs-6">
+                    <!-- <input type="text" name="query" class="q col-md-6"onfocus="this.value = this.value+'#';""> -->
                         <input type="text" name="dollar" class="input_dollar">
+                      <!--   <input type="text" name="dollar" class="input_dollar" onfocus="this.value = this.value+'$';""> -->
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <span class="give_button">Give Now</span>
@@ -55,7 +57,7 @@
                 <div class="modal-content">
                     <div class="modal-header modal_frst">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title text-center">SAVED</h4>
+                        <h4 class="modal-title text-center modal_titl_2">SAVED</h4>
                     </div>
                 </div>
             </div>
@@ -68,7 +70,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title text-center">Social Media</h4>
+                        <h4 class="modal-title text-center">SHARE</h4>
                     </div>
                     <div class="modal-body modal1">
                         <!--   <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank"><img src="image/fb.png" class="fb_icon"></a> -->
@@ -102,6 +104,7 @@
         var result = 0;
         $(".give_button").click(function() {
             console.log("clicked");
+
             // for(var result = 0;result<=1000;result++)
             // {
 
@@ -112,33 +115,19 @@
                 console.log(result);
                 $('.money_left').text(Math.round((100-result)*10));
                 $('.speech_bubbles').show();
-                // result = 75
-                // limit = 100
-                //allowed valu =25
-                // if(100-result>=temp)
 
 
                 $("#progress-bar")
                     .css("width", result + "%")
                     .attr("aria-valuenow", result)
-                    .text(result + "%");
+
+                    // .text(result + "%");
 
             } else {
-                alert("exceeded 100000000000");
+                alert("exceeded 1000");
             }
-            // }
-            // add the value till it becms to 1000
-
-
-            // $("#progress-bar")
-            //     .css("width", result + "%")
-            //     .attr("aria-valuenow", result)
-            //     .text(result + "%");
-
-
+  $('.input_dollar').val("");
         });
-
-        // }
         </script>
     </div>
 </body>

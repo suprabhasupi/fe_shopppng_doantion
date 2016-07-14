@@ -1,0 +1,75 @@
+<md-dialog aria-label="Mango (Fruit)"  ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Cart Details</h2>
+                <!-- <h2>Total Amount:</h2> -->
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+        <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+          <!-- <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon> -->
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="container md-dialog-content">
+       
+         <table md-colresize="md-colresize" class="md-table col-md-12 col-sm-12 col-xs-12">
+           <thead>
+            <tr class="md-table-headers-row">
+              <th class="md-table-header">
+              No.
+
+              </th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Remove</th>
+              <th>
+                 <button class="_btn _column product-subtract">&minus;</button>
+              <div class="_column product-qty">0</div>
+              <button class="_btn _column product-plus">&plus;</button>
+
+              </th>
+
+
+            </tr>
+
+           </thead>
+
+            <tbody>
+               <tr ng-repeat="c in x track by $index" class="md-table-content-row">
+                 <td class="md-table-td-more">
+                 1
+                 </td>
+                 <td>{{c.Name}}</td>
+                 <td>{{c.Price}}</td>
+                 <td>1</td>
+                 <td><button ng-click="removeProduct">Remove</button></td>
+               </tr>
+
+
+            </tbody>
+
+
+
+         </table>
+
+
+
+       
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+     <!--  <md-button href="#" target="_blank" md-autofocus>
+        More on Wikipedia
+      </md-button> -->
+   
+     
+      <md-button class="md-raised" ng-click="">
+        Clear
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

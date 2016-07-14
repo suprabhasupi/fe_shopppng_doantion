@@ -7,8 +7,13 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
     <link rel="stylesheet" type="text/css" href="css/new_css.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
        <link rel="stylesheet" href="css/angular-material.min.css">
+       <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
+   
 </head>
 <body ng-controller="shopController as sc">
 
@@ -16,37 +21,34 @@
 <!-- http://suprabha.me/js/stock.json -->
 <div class="col-md-12 col-sm-12 col-xs-12">
 <div class="col-md-12 col-sm-12 col-xs-12">
-<md-button class="md-fab md-primary pull-right" aria-label="Use Android">
-          <md-icon md-svg-src="img/icons/android.svg"></md-icon>
+<md-button class="md-fab md-primary pull-right" aria-label="Use Android" ng-click="sc.showcart()">
+         <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
         </md-button>
         </div>
 <div class="product col-md-3 col-sm-3 col-xs-12" ng-repeat="p in sc.productlist">
 
      <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
-      <md-card-title-media>
-            <div class="md-media-lg card-media">
-            <img src="{{p.img}}" class="product_image">
+      <md-card-title-media> 
+            <div class="md-media-lg card-media " onhover="animate()">
+            <img src="{{p.img}}" class="product_image wow flip ">
             </div>
           </md-card-title-media>
         <md-card-title>
 
           <md-card-title-text>
             <span class="md-headline text-center">{{p.Name}}</span>
-            <span class="md-subhead text-center"> {{p.Price}} </span>
+            <span class="md-subhead text-center">Rs {{p.Price}} </span>
           </md-card-title-text>
          
         </md-card-title>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button ng-click="sc.test(p)" class=""> CART</md-button>
+        <md-card-actions layout="row" layout-align="end center" class=" center-block text-center">
+        <!-- <md-button class="md-raised">Button</md-button> -->
+          <md-button class="md-raised" ng-click="sc.addToCart(p)" ng-disabled="sc.disable" required ng-init="button=sc.disable"> ADD TO CART</md-button>
           <!-- <md-button>Action 2</md-button> -->
         </md-card-actions>
       </md-card>
 
 
-
-
-
-<!-- <button ng-click="sc.test(p)">cart</button> -->
 </div>
 </div>
 
@@ -60,8 +62,7 @@
 <!-- <script src="js/angular-messages.min.js"></script> -->
 <!-- Angular Material Library -->
 <script src="js/angular-material.min.js"></script>
-<!-- Jquery Lib -->
-<!-- <script src="js/jquery2.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+
 <script src="js/jquery.min.js"></script>
 <!-- Bootstrap.js -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

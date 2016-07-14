@@ -9,3 +9,71 @@
 md-card>:not(md-card-content) img, md-card>img{
 	width: 12em !important;
 }
+
+/*--------------------------for modal---------------------------*/
+
+.dialogdemoBasicUsage #popupContainer {
+  position: relative; }
+.dialogdemoBasicUsage .footer {
+  width: 100%;
+  text-align: center;
+  margin-left: 20px; }
+.dialogdemoBasicUsage .footer, .dialogdemoBasicUsage .footer > code {
+  font-size: 0.8em;
+  margin-top: 50px; }
+.dialogdemoBasicUsage button {
+  width: 200px; }
+.dialogdemoBasicUsage div#status {
+  color: #c60008; }
+.dialogdemoBasicUsage .dialog-demo-prerendered md-checkbox {
+  margin-bottom: 0; }
+
+
+/*------------------end modal-------------------------------*/
+
+.md-headline{
+  color: #0076f5;
+}
+span.md-subhead.text-center.ng-binding{
+  color: #fd0358;
+}
+
+button.md-raised.md-button.md-default-theme.md-ink-ripple{
+      color: #ffffff;
+    background: #00c2ff;
+    position: relative;
+    top: -.8em;
+    left: .5em;
+     cursor: pointer;
+}
+
+button.md-fab.md-primary.pull-right.md-button.md-ink-ripple,button.md-raised.md-button.md-ink-ripple{
+    color: #ffffff;
+    background: #00c2ff;
+    position: relative;
+    top: 0em;
+    left: 0em;
+    cursor: pointer;
+}
+
+button.md-raised.md-button.md-default-theme.md-ink-ripple:hover,button.md-fab.md-primary.pull-right.md-button.md-ink-ripple:hover,
+button.md-raised.md-button.md-ink-ripple:hover,button.md-raised.md-button.md-ink-ripple:focus{
+      color: white;
+      background: #f50773;
+
+    }
+
+    i.fa.fa-shopping-cart.fa-2x.ng-scope{
+          position: relative;
+    top: 4px;
+    left: -1px;
+    }
+
+    md-dialog-actions.layout-row {
+    border-top: 1px solid #cccccc;
+    height: 0em;
+    /*padding: 0px 37px;*/
+}
+th{
+  /*padding: 0 2px;*/
+}

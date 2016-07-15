@@ -50,6 +50,9 @@
             // shop.disable = true;
             console.log(selectedProduct);
             cartService.setSelectedProduct(selectedProduct);
+            val.disabled=true;
+                 
+            
 
 
         }
@@ -126,8 +129,8 @@
         $scope.items=$scope.items+1;
         return $scope.items;
   });
-}
-
+}          
+        
     }
 
 })();

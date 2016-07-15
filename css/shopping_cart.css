@@ -38,7 +38,7 @@ span.md-subhead.text-center.ng-binding{
   color: #fd0358;
 }
 
-button.md-raised.md-button.md-default-theme.md-ink-ripple{
+/*button.md-raised.md-button.md-default-theme.md-ink-ripple{
       color: #ffffff;
     background: #00c2ff;
     position: relative;
@@ -61,7 +61,7 @@ button.md-raised.md-button.md-ink-ripple:hover,button.md-raised.md-button.md-ink
       color: white;
       background: #f50773;
 
-    }
+    }*/
 
     i.fa.fa-shopping-cart.fa-2x.ng-scope{
           position: relative;
@@ -72,7 +72,7 @@ button.md-raised.md-button.md-ink-ripple:hover,button.md-raised.md-button.md-ink
     md-dialog-actions.layout-row {
     border-top: 1px solid #cccccc;
     height: 0em;
-    /*padding: 0px 37px;*/
+ 
 }
 th{
   /*padding: 0 2px;*/

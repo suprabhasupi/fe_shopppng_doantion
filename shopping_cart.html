@@ -25,7 +25,7 @@
          <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
         </md-button>
         </div>
-<div class="product col-md-3 col-sm-3 col-xs-12" ng-repeat="p in sc.productlist">
+<div class="product col-md-3 col-sm-3 col-xs-12" ng-repeat="p in sc.productlist ">
 
      <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
       <md-card-title-media> 
@@ -43,7 +43,8 @@
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center" class=" center-block text-center">
         <!-- <md-button class="md-raised">Button</md-button> -->
-          <md-button class="md-raised" ng-click="sc.addToCart(p)" ng-disabled="sc.disable" required ng-init="button=sc.disable"> ADD TO CART</md-button>
+          <md-button class="md-raised" ng-click="sc.addToCart(p)" ng-disabled="p.disabled"> ADD TO CART</md-button>
+           <!-- <md-button class="md-raised" ng-click="sc.addToCart(p,$index)" ng-disabled="{true:$index===sc.select(i)" required ng-init="button=sc.disable" > ADD TO CART</md-button> --> 
           <!-- <md-button>Action 2</md-button> -->
         </md-card-actions>
       </md-card>

@@ -26,12 +26,10 @@
               <th>Quantity</th>
               <th>Total</th>
               <th>Remove</th>
-              <th>
-                 <button class="_btn _column product-subtract">&minus;</button>
-              <div class="_column product-qty">0</div>
-              <button class="_btn _column product-plus">&plus;</button>
+              <!-- <th> -->
+                 
 
-              </th>
+              <!-- </th> -->
 
 
             </tr>
@@ -41,12 +39,17 @@
             <tbody>
                <tr ng-repeat="c in x track by $index" class="md-table-content-row">
                  <td class="md-table-td-more">
-                 1
+                 {{$index+1}}
                  </td>
                  <td>{{c.Name}}</td>
                  <td>{{c.Price}}</td>
-                 <td>1</td>
-                 <td><button ng-click="removeProduct">Remove</button></td>
+                 <td>
+                   <button class="_btn _column product-subtract">&minus;</button>
+              <div class="_column product-qty">{{items}}</div>
+              <button class="_btn _column product-plus" ng-click="plus_items()">&plus;</button>
+                 </td>
+                 <td></td>
+                 <td><button ng-click="remove($index)">Remove</button></td>
                </tr>
 
 

@@ -31,7 +31,7 @@
         var shop = this;
         var selectedProduct=[];
         var trackResource = $resource(init_url);
-        shop.disable = false;
+        // shop.disable = false;
         var val = trackResource.query(function() {
             shop.productlist = val;
             console.log(val);
@@ -47,42 +47,12 @@
             // console.log('clicked');
             
             selectedProduct.push(val);
-            shop.disable = true;
+            // shop.disable = true;
             console.log(selectedProduct);
             cartService.setSelectedProduct(selectedProduct);
 
 
         }
-
-
-  // shop.removeProduct= function () {
-  
-
-  //   var item = $(this).closest(".md-table-content-row");
-
-  //   item.addClass("closing");
-  //   window.setTimeout( function () {
-  //     item.remove();
-  //     app.updateTotals();
-  //   }, 500);
-  // }
-
-
-
-
-// shop.remove = function(index) {
-//     selectedProduct.data.splice(index,1);
-//   }
- // shop.remove = function(index) {
- //        shop.invoice.items.splice(index, 1);
- //    }
-
-
-
-
-
-
-
 
  // for total--------------
 
@@ -128,6 +98,7 @@
 
 
     function DialogController($scope, $mdDialog, cartService) {
+        $scope.items=1;
         $scope.x=cartService.getSelectedProduct()
         console.log($scope.x);
 
@@ -145,16 +116,21 @@
         $scope.answer = function(answer) {
             $mdDialog.hide(answer); 
         };
+        $scope.remove = function(index) {
+    $scope.x.splice(index,1);
+    console.log(index);
+  };
+
+  $scope.plus_items=function(){
+    $scope.items.find(function(itm){
+        $scope.items=$scope.items+1;
+        return $scope.items;
+  });
+}
+
     }
 
 })();
 
 
 
-
-// for adding the item:-- on button ng-click
-// sc.addToCart = function(item)
-// {
-// sc.CartItems.push(item);  or
-// sc.CartItems.push(sc.newitems);
-// }

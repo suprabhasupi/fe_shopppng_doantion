@@ -77,3 +77,10 @@ button.md-raised.md-button.md-ink-ripple:hover,button.md-raised.md-button.md-ink
 th{
   /*padding: 0 2px;*/
 }
+.md-toolbar-tools{
+  background: #00c2ff;
+  /*height: 50px ! important;*/
+}
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar){
+  background: transparent;
+}

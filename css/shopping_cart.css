@@ -38,7 +38,7 @@ span.md-subhead.text-center.ng-binding{
   color: #fd0358;
 }
 
-/*button.md-raised.md-button.md-default-theme.md-ink-ripple{
+button.md-raised.md-button.md-default-theme.md-ink-ripple{
       color: #ffffff;
     background: #00c2ff;
     position: relative;
@@ -47,7 +47,7 @@ span.md-subhead.text-center.ng-binding{
      cursor: pointer;
 }
 
-button.md-fab.md-primary.pull-right.md-button.md-ink-ripple,button.md-raised.md-button.md-ink-ripple{
+/*button.md-fab.md-primary.pull-right.md-button.md-ink-ripple,button.md-raised.md-button.md-ink-ripple{
     color: #ffffff;
     background: #00c2ff;
     position: relative;

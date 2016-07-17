@@ -44,11 +44,11 @@
                  <td>{{c.Name}}</td>
                  <td>{{c.Price}}</td>
                  <td>
-                   <button class="_btn _column product-subtract">&minus;</button>
-              <div class="_column product-qty">{{items}}</div>
-              <button class="_btn _column product-plus" ng-click="plus_items()">&plus;</button>
+                  
+               <input type="number" value="1" min="1" ng-model="items">
                  </td>
-                 <td></td>
+                 <td>{{items*c.Price}}</td>
+                 <!-- <td>{{items}}</td>  -->
                  <td><button ng-click="remove($index)">Remove</button></td>
                </tr>
 

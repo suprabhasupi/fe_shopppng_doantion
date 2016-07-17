@@ -44,8 +44,11 @@
         <md-card-actions layout="row" layout-align="end center" class=" center-block text-center">
         <!-- <md-button class="md-raised">Button</md-button> -->
           <md-button class="md-raised" ng-click="sc.addToCart(p)" ng-disabled="p.disabled"> ADD TO CART</md-button>
-           <!-- <md-button class="md-raised" ng-click="sc.addToCart(p,$index)" ng-disabled="{true:$index===sc.select(i)" required ng-init="button=sc.disable" > ADD TO CART</md-button> --> 
-          <!-- <md-button>Action 2</md-button> -->
+         <!--  <input type="button" value="Save" ng-click="sc.Save()" />
+        <input type="button" value="Get" ng-click="sc.Get()" />
+         -->
+         <!-- <button ng-click="sc.save(p)">Save</button> -->
+            <button ng-click="sc.load()">Load</button>
         </md-card-actions>
       </md-card>
 
@@ -55,6 +58,7 @@
 
 </body>
 <script src="js/angular.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
 <!-- Angular ng-resource -->
 <script src="js/angular-resource.min.js"></script>
 <!-- Angular animation -->
@@ -69,6 +73,7 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- This one is for router -->
 <script src="js/angular-route.min.js"></script>
+<!-- <script type="text/javascript" src="js/ngStorage.min.js"></script> -->
 <!-- App.js for this app -->
 <script type="text/javascript" src="app.js"></script>
 

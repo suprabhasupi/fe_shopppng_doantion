@@ -43,7 +43,7 @@
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center" class=" center-block text-center">
         <!-- <md-button class="md-raised">Button</md-button> -->
-          <md-button class="md-raised" ng-click="sc.addToCart(p)" ng-disabled="p.disabled"> ADD TO CART</md-button>
+          <md-button class="md-raised add_to_cart" ng-click="sc.addToCart(p)" ng-disabled="p.disabled"> ADD TO CART</md-button>
          <!--  <input type="button" value="Save" ng-click="sc.Save()" />
         <input type="button" value="Get" ng-click="sc.Get()" />
          -->
@@ -52,6 +52,11 @@
         </md-card-actions>
       </md-card>
 
+<!-- <script type="text/javascript">
+  $('.add_to_cart').on("click", function() {
+   $(this).css('background-color','red'); 
+ });
+</script> -->
 
 </div>
 </div>

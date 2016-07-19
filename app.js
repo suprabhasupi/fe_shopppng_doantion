@@ -4,6 +4,18 @@
 
     app.service('cartService', ['$resource', '$localStorage', '$sessionStorage',
      function($resource, $localStorage, $sessionStorage) {
+
+          var init_url = "http://suprabha.me/js/stock.json";
+        // var shop = this;
+        // var selectedProduct = [];
+        var trackResource = $resource(init_url);
+        // shop.disable = false;
+        this.val = trackResource.query(function() {
+            // shop.productlist = this.val;
+            console.log(this.val);
+        });
+
+
         this.getResource = function(url) {
             return $resource(url);
         }
@@ -29,6 +41,45 @@
             }
         }
 
+        var lsData;
+        this.refresh = function(){
+            // get local storage data 
+            lsData = $localStorage.message;
+            // lsData = [{Name:a,Price::1000},{Name:bb,Price::3000}]
+            // i =
+            // data = [{Name:a,Price::1000},{Name:bb,Price::3000}]
+            // j =
+            // console.log("LSDATA =>", lsData);
+            // console.log("All Product =>", this.val);
+            for(var i=0;i <lsData.length; i++)
+            { 
+                console.log("i", lsData[i]);
+                for(var j=0;j<this.val.length;j++)
+                {
+                    if(lsData[i].Name===this.val[j].Name){
+                        console.log("lsData",lsData[i].Name);
+                        console.log("this.val",this.val[j].Name);
+
+                        console.log("TRUE ho gya!");
+                       this.val[j].disabled = true;
+                       
+                    }
+
+                    else{
+
+                        this.val[j].disabled = false;
+                    }
+                    
+                }
+            }
+            // lsData (array of selected products)
+            // data (array of all product)
+            // check if lsData product is in data
+                // if it is there than disable he button for that product.
+            // else
+                // enable the button.
+        }
+
         // this.init=function(){
         //     this.localmsg=this.load();
         // }      
@@ -45,6 +96,9 @@
             shop.productlist = val;
             console.log(val);
         });
+
+
+        
 
         // function which check if val is there in d local storge then disabl the add to cart button
         // basically a for loop which itreates over list item and checks if product exist in 
@@ -74,14 +128,7 @@
             $localStorage.message = selectedProduct;
 
 
-
-
-
         }
-
-
-
-
 
 
         // Get the Cart
@@ -135,6 +182,7 @@
         $scope.remove = function(index) {
             $scope.x.splice(index, 1);
             console.log(index);
+            cartService.refresh();
             // x.disabled=false;            
         };
 
@@ -153,8 +201,17 @@
 
 
 
+// if (selectedProduct != 0) {
 
+   
+//     for(var i=0; i<$scope.cart.length; i++)
+//     {
+//         $localStorage.items.push($scope.cart[i]);
+//     }
+// }
 //append the cart items + local storage
+
+
 //should nt add sam item in locl strg twic(if the item exist in LC ....disbl the add to cart btn)
 // refresh
 // enabling disbl add t cart butn  on product removal from cart

@@ -1,3 +1,23 @@
+<style type="text/css">
+  .container {
+    width: 1078px;
+}
+img{
+  width: 57%;
+      margin-top: 1em;
+    margin-bottom: 1em;
+}
+tr{
+      border-bottom: 2px solid #e9e0e0;
+      /*padding: 10px 0;*/
+}
+th{
+      position: relative !important;
+    left: -0.6em;
+}
+</style>
+
+
 <md-dialog aria-label="Mango (Fruit)"  ng-cloak>
   <form>
     <md-toolbar>
@@ -17,15 +37,16 @@
          <table md-colresize="md-colresize" class="md-table col-md-12 col-sm-12 col-xs-12">
            <thead>
             <tr class="md-table-headers-row">
-              <th class="md-table-header">
+              <th class="md-table-header col-md-1">
               No.
 
               </th>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Total</th>
-              <th>Remove</th>
+              <th class="col-md-2"></th>
+              <th class="col-md-2">Product</th>
+              <th class="col-md-2">Price</th>
+              <th class="col-md-2">Quantity</th>
+              <th class="col-md-2">Total</th>
+              <th class="col-md-2">Remove</th>
               <!-- <th> -->
                  
 
@@ -38,9 +59,10 @@
 
             <tbody>
                <tr ng-repeat="c in x track by $index" class="md-table-content-row">
-                 <td class="md-table-td-more">
+                 <td class="md-tablel-td-more">
                  {{$index+1}}
                  </td>
+                 <td><img ng-src="{{c.img}}"></td>
                  <td>{{c.Name}}</td>
                  <td>{{c.Price}}</td>
                  <td>
@@ -49,7 +71,7 @@
                  </td>
                  <td>{{items*c.Price}}</td>
                  <!-- <td>{{items}}</td>  -->
-                 <td><button ng-click="remove($index)">Remove</button></td>
+                 <td ng-click="remove($index)"><i class="fa fa-times fa-2x modal" aria-hidden="true"></i></td>
                </tr>
 
 
@@ -70,7 +92,7 @@
       </md-button> -->
    
      
-      <md-button class="md-raised" ng-click="">
+      <md-button class="md-raised" ng-click="clear()">
         Clear
       </md-button>
     </md-dialog-actions>

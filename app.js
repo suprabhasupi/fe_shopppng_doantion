@@ -2,7 +2,8 @@
     var app = angular.module('shopping-app', ['ngMaterial', 'ngResource', 'ngRoute', 'ngStorage']);
 
 
-    app.service('cartService', ['$resource', function($resource) {
+    app.service('cartService', ['$resource', '$localStorage', '$sessionStorage',
+     function($resource, $localStorage, $sessionStorage) {
         this.getResource = function(url) {
             return $resource(url);
         }
@@ -11,12 +12,26 @@
             console.log("setting value");
         }
         this.getSelectedProduct = function() {
-                console.log("getting value");
-                return this.sproduct;
+            console.log("getting value");
+            this.sproduct = this.load();
+            console.log(this.sproduct);
+            return this.sproduct;
 
+        }
+
+        this.load = function() {
+
+            if (localStorage.getItem("ngStorage-message") != null) {
+                this.data = $localStorage.message;
+                return this.data;
+            } else {
+                return 0;
             }
+        }
 
-       
+        // this.init=function(){
+        //     this.localmsg=this.load();
+        // }      
     }]);
     // app.controller(){}
     app.controller('shopController', ['$resource', '$mdDialog', '$mdMedia', 'cartService', '$localStorage', '$sessionStorage', function($resource, $mdDialog,
@@ -30,31 +45,44 @@
             shop.productlist = val;
             console.log(val);
         });
-      
 
+        // function which check if val is there in d local storge then disabl the add to cart button
+        // basically a for loop which itreates over list item and checks if product exist in 
+        // local storeage if it does than make val.disable = true or else make it false.
+       
+        // shop.buttonDisabler = function(val) {
+        //     var lsData;
+        //     if (localStorage.getItem("ngStorage-message") != null) {
+        //         lsData = $localStorage.message;
+        //         angular.forEach(val, function(i) {
+        //             if (i.Name == ) {}
+        //         })
+        //     }
+
+        // }
+        
         shop.addToCart = function(val) {
-                // console.log('clicked');
+            // console.log('clicked');
 
-                selectedProduct.push(val);
-                // shop.disable = true;
-                console.log(selectedProduct);
-                cartService.setSelectedProduct(selectedProduct);
-                val.disabled = true;
-                 // $localStorage.message = selectedProduct;
+            selectedProduct.push(val);
+            // shop.disable = true;
+            console.log(selectedProduct);
+            cartService.setSelectedProduct(selectedProduct);
+            val.disabled = true;
+            // $localStorage.message = selectedProduct;
 
-                 $localStorage.message = selectedProduct;
+            $localStorage.message = selectedProduct;
 
 
 
-            }
-            
-        shop.load = function() {
-            shop.data = $localStorage.message;
+
+
         }
 
 
 
-      
+
+
 
         // Get the Cart
         shop.showcart = function(ev) {
@@ -85,9 +113,9 @@
     // closing controller
 
 
-    function DialogController($scope, $mdDialog, cartService) {
+    function DialogController($scope, $mdDialog, cartService, $localStorage, $sessionStorage) {
         $scope.items = 1;
-        $scope.x = cartService.getSelectedProduct()
+        $scope.x = cartService.getSelectedProduct();
         console.log($scope.x);
 
         // $scope.y=cartService.removePro(index){
@@ -107,11 +135,26 @@
         $scope.remove = function(index) {
             $scope.x.splice(index, 1);
             console.log(index);
-    // x.disabled=false;            
+            // x.disabled=false;            
         };
 
-       
+        $scope.clear = function(index) {
+            $scope.x = [];
+            $localStorage.$reset();
+            // x.disabled=false;            
+        };
+
+
 
     }
 
 })();
+
+
+
+
+
+//append the cart items + local storage
+//should nt add sam item in locl strg twic(if the item exist in LC ....disbl the add to cart btn)
+// refresh
+// enabling disbl add t cart butn  on product removal from cart

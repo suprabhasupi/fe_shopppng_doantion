@@ -47,7 +47,7 @@ button.md-raised.md-button.md-default-theme.md-ink-ripple{
      cursor: pointer;
 }
 
-/*button.md-fab.md-primary.pull-right.md-button.md-ink-ripple,button.md-raised.md-button.md-ink-ripple{
+button.md-fab.md-primary.pull-right.md-button.md-ink-ripple,button.md-raised.md-button.md-ink-ripple{
     color: #ffffff;
     background: #00c2ff;
     position: relative;
@@ -61,7 +61,7 @@ button.md-raised.md-button.md-ink-ripple:hover,button.md-raised.md-button.md-ink
       color: white;
       background: #f50773;
 
-    }*/
+    }
 
     i.fa.fa-shopping-cart.fa-2x.ng-scope{
           position: relative;
@@ -74,8 +74,15 @@ button.md-raised.md-button.md-ink-ripple:hover,button.md-raised.md-button.md-ink
     height: 0em;
  
 }
+th,td{
+  padding: 0 6px;
+  outline: none;
+}
 th{
-  /*padding: 0 2px;*/
+      color: #07a0fd;
+    font-weight: 800;
+    font-size: 1.2em;
+    outline: none;
 }
 .md-toolbar-tools{
   background: #00c2ff;
@@ -83,4 +90,21 @@ th{
 }
 md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar){
   background: transparent;
+}
+
+/*input.ng-valid.ng-not-empty.ng-valid-min.ng-dirty.ng-valid-number.ng-touched {
+    width: 11%;
+    border-color: rgba(0, 0, 0, 0.75);
+}
+*/
+
+input[type="number"]{
+  width: 38%;
+    border-color: rgba(0, 0, 0, 0.75);
+    outline: none;
+}
+
+i.fa.fa-times.fa-2x.modal{
+  position: relative;
+  left: .5em;
 }

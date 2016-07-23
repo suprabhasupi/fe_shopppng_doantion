@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html ng-app="shopping-app">
 <head>
-	<title>Shopping_cart</title>
-	 <meta charset="utf-8">
+  <title>Shopping_cart</title>
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
+    
     <link rel="stylesheet" type="text/css" href="css/new_css.css">
     <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="css/animate.css"> -->
        <link rel="stylesheet" href="css/angular-material.min.css">
+       <link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
    
@@ -42,34 +43,22 @@
          
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center" class=" center-block text-center">
-        <!-- <md-button class="md-raised">Button</md-button> -->
           <md-button class="md-raised add_to_cart" ng-click="sc.addToCart(p)" ng-disabled="p.disabled"> ADD TO CART</md-button>
-         <!--  <input type="button" value="Save" ng-click="sc.Save()" />
-        <input type="button" value="Get" ng-click="sc.Get()" />
-         -->
-         <!-- <button ng-click="sc.save(p)">Save</button> -->
-            <!-- <button ng-click="sc.load()">Load</button> -->
         </md-card-actions>
       </md-card>
-
-<!-- <script type="text/javascript">
-  $('.add_to_cart').on("click", function() {
-   $(this).css('background-color','red'); 
- });
-</script> -->
 
 </div>
 </div>
 
 </body>
 <script src="js/angular.min.js"></script>
- <script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+<script type="text/javascript" src="js/ngStorage.min.js"></script>
+<!--  <script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script> -->
 <!-- Angular ng-resource -->
 <script src="js/angular-resource.min.js"></script>
 <!-- Angular animation -->
 <script src="js/angular-animate.min.js"></script>
 <script src="js/angular-aria.min.js"></script>
-<!-- <script src="js/angular-messages.min.js"></script> -->
 <!-- Angular Material Library -->
 <script src="js/angular-material.min.js"></script>
 
@@ -78,7 +67,7 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- This one is for router -->
 <script src="js/angular-route.min.js"></script>
-<!-- <script type="text/javascript" src="js/ngStorage.min.js"></script> -->
+
 <!-- App.js for this app -->
 <script type="text/javascript" src="app.js"></script>
 

@@ -1,5 +1,5 @@
 .product_image{
-	 max-height: 350px;
+   max-height: 350px;
     min-height: 350px;
         position: relative;
     left: 4em;
@@ -7,7 +7,7 @@
 }
 
 md-card>:not(md-card-content) img, md-card>img{
-	width: 12em !important;
+  width: 12em !important;
 }
 
 /*--------------------------for modal---------------------------*/
@@ -107,4 +107,12 @@ input[type="number"]{
 i.fa.fa-times.fa-2x.modal{
   position: relative;
   left: .5em;
+}
+
+.md-button.md-default-theme.md-raised[disabled], .md-button.md-raised[disabled], .md-button.md-default-theme.md-fab[disabled], .md-button.md-fab[disabled]{
+  background-color: rgba(0, 194, 255, 0.49) !important;
+}
+
+md-dialog md-dialog-content{
+  overflow-x: hidden;
 }

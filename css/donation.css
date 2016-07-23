@@ -33,6 +33,9 @@ input[type="text"]{
 	    outline: none;
 	    font-size: 1.5em;
 	    width: 100%;
+	    padding-left: 1.1em;
+	    font-weight: bold;
+	    color: #333232;
 }
 
 span.left1{
@@ -166,4 +169,12 @@ content: "";
 
 p.speech_bubbles{
 	display: none;
+}
+
+span.dollar
+{
+    position: absolute;
+    margin-top: 19px;
+    margin-left: 10px;
+    font-size: 1.5em;
 }

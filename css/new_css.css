@@ -1,55 +1,8 @@
-@font-face {
-        font-family:tregular;
-        src: url(font/Titillium-Regular.otf);
-}
-.tregular{
-    font-family:tregular;
-}
-@font-face {
-        font-family:tlight;
-        src: url(font/TTitillium-Light.otf);
-}
-.tlight{
-    font-family:tlight;
-}
-@font-face {
-        font-family:tbold;
-        src: url(font/Titillium-Bold.otf);
-}
-.tbold{
-    font-family:tbold;
-}
 
 @font-face {
-        font-family:lato_light;
-        src: url(font/Lato-Light.ttf);
+        font-family:ralreg;
+        src: url(font/Raleway-Regular.ttf);
 }
-.lato_light{
-    font-family:lato_light;
-}
-
-@font-face {
-        font-family:lato_black;
-        src: url(font/Lato-Black.ttf);
-
-}
-.lato_black{
-    font-family:lato_black;
-
-}
-
-@font-face {
-        font-family:lato_litittalic;
-        src: url(font/Lato-LightItalic.ttf);
-}
-.lato_litittalic{
-    font-family:lato_litittalic;
-}
-
-@font-face {
-        font-family:lato_medium;
-        src: url(font/Lato-Medium.ttf);
-}
-.lato_medium{
-    font-family:lato_medium;
+.ralreg{
+    font-family:ralreg;
 }

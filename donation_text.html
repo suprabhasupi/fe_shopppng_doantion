@@ -28,15 +28,10 @@
 
         }
     }
-
-    // function remove(){
-    //      document.getElementById('textfield').value = '';
-    //      localStorage.removeItem('text');
-    // }
 </script>
 
 <body onload="load()">
-    <div class="container col-md-12 col-sm-12 col-xs-12">
+    <div class="container col-md-12 col-sm-12 col-xs-12 ralreg">
         <div class="col-md-3 col-sm-3"></div>
         <div class="col-md-6 col-sm-6 col-xs-12">
          <p class="speech_bubbles">$<span class="money_left"></span> still needed for this project</p>
@@ -46,16 +41,18 @@
                 </div>
             </div>
 
-            <div class="box col-md-12 col-sm-12 col-xs-12">
+            <div class="box col-md-12 col-sm-12 col-xs-12 ralreg">
                 <div class="col-md-1 col-sm-1"></div>
                 <div class="col-md-10 col-sm-10 col-xs-12">
 
-                    <p class="p1"><span class="left1">Only 3 days left </span>to fund this project.</p>
-                    <p class="p2">Join the 42 other donors who have already supported this project.Every dollar helps.</p>
+                    <p class="p1"><span class="left1">Only <span class="ralreg"> 3 </span>days left </span>to fund this project.</p>
+                    <p class="p2">Join the <span class="ralreg"><b>42</b></span> other donors who have already supported this project.Every dollar helps.</p>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                     <!-- <input type="text" name="query" class="q col-md-6"onfocus="this.value = this.value+'#';""> -->
+                    <span class="dollar">$</span>
                         <input type="text" name="dollar" class="input_dollar" id="textfield">
-                      <!--   <input type="text" name="dollar" class="input_dollar" onfocus="this.value = this.value+'$';""> -->
+                       <!--  <input type="text" name="dollar" class="input_dollar" onfocus="this.value = this.value+'$';""> -->
+                      <p><a href="#p" class="why">Why give $50?</a></p>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <span class="give_button" onclick="save()">Give Now</span>
@@ -63,7 +60,7 @@
 
                     </div>
                          
-                    <!-- <p><a href="#p" class="why">Why give $50?</a></p> -->
+                    
                 </div>
                 <div class="col-md-1 col-sm-1"></div>
             </div>
@@ -97,8 +94,10 @@
                         <h4 class="modal-title text-center">SHARE</h4>
                     </div>
                     <div class="modal-body modal1">
-                        <!--   <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank"><img src="image/fb.png" class="fb_icon"></a> -->
-                        <a href="https://www.facebook.com/sharer/sharer.php?app_id=113869198637480&sdk=joey&u=http%3A%2F%2Fsuprabha.me%2F&display=popup&ref=plugin&src=share_button" target="_blank"><img src="image/fb.png" class="fb_icon"></a>
+                          <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank"><img src="image/fb.png" class="fb_icon"></a>
+                      
+<!-- 
+                        <a href="https://www.facebook.com/sharer/sharer.php?app_id=113869198637480&sdk=joey&u=http%3A%2F%2Fsuprabha.me%2F&display=popup&ref=plugin&src=share_button" target="_blank"><img src="image/fb.png" class="fb_icon"></a> -->
                         <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Yay,%20I%20donated!" target="_blank" data-size="large"><img src="image/twitter.png" class="tw_icon"></a>
                     </div>
                     <!--  <div class="modal-footer">
